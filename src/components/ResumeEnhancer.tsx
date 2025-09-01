@@ -266,6 +266,8 @@ const ResumeEnhancer: React.FC<ResumeEnhancerProps> = ({ candidate, onSave, onCl
           setEnhancementComplete(true);
         } catch (error) {
           console.error('Error loading saved enhancements:', error);
+          setEnhancementComplete(false);
+          setEnhancedResume(null);
         }
       }
     }
